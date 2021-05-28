@@ -1,7 +1,10 @@
 body {
-    background-color: $back-color;
-    width           : 100%;
-    min-height      : 100vh;
+    // background-image : url(../img/back2.jpg);
+    background-image : $back-color;
+    background-repeat: no-repeat;
+    background-size  : cover;
+    width            : 100%;
+    min-height       : 100vh;
     @include flex-cc;
 
     &:after {
