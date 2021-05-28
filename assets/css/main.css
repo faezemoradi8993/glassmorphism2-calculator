@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#f00, #f0f);
+  clip-path: circle(20% at 10% 10%);
+}
+
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#60a2d8, #e91e63 50%);
+  clip-path: circle(25% at 88% 77%);
+}
+
+.container {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  backdrop-filter: blur(16px);
+  z-index: 10;
+}
+
+.container .calculator {
+  position: relative;
+  display: grid;
+}
+
+.container .calculator .input {
+  border: none;
+  height: 140px;
+  width: 300px;
+  background: transparent;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: right;
+  color: white;
+  font-size: 30px;
+  grid-column: span 4;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container .calculator .num {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  user-select: none;
+  height: 75px;
+  width: 75px;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.container .calculator .num.clear {
+  grid-column: span 2;
+  width: 150px;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.container .calculator .num.plus {
+  grid-row: span 2;
+  height: 150px;
+}
+
+.container .calculator .num.equal {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.container .calculator .num:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: 0s;
+  -webkit-transition: 0s;
+  -moz-transition: 0s;
+  -ms-transition: 0s;
+  -o-transition: 0s;
+}
+
+.container .calculator .num:active {
+  background-color: #7155eb;
+  font-weight: 600;
+}
+/*# sourceMappingURL=main.css.map */

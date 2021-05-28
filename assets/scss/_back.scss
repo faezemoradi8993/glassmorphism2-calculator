@@ -1,0 +1,28 @@
+body {
+    background-color: $back-color;
+    width           : 100%;
+    min-height      : 100vh;
+    @include flex-cc;
+
+    &:after {
+        content         : "";
+        position        : absolute;
+        top             : 0;
+        right           : 0;
+        width           : 100%;
+        height          : 100%;
+        background-image: $gradient-color-1;
+        clip-path       : circle(20% at 10% 10%);
+    }
+
+    &:before {
+        content         : "";
+        position        : absolute;
+        top             : 0;
+        right           : 0;
+        width           : 100%;
+        height          : 100%;
+        background-image: $gradient-color-2;
+        clip-path       : circle(25% at 88% 77%);
+    }
+}
